@@ -17,12 +17,13 @@ body {
 }
 
 nav {
-  position: relative;
-  display: inline-block;
+  /* position: relative; */
+  /* display: inline-block; */
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
+  width: 100%;
 }
 
 .socials i {
@@ -30,17 +31,19 @@ nav {
 }
 
 .sub-container ul {
-  position: relative;
-  display: inline-block;
+  /* position: relative; */
+  /* display: inline-block; */
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: space-between;
 }
 
 .sub-container a {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   color: white;
+  text-align: center;
 }
 
 a {
@@ -57,6 +60,7 @@ a {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  width: auto;
 }
 
 .logo span {
@@ -74,7 +78,7 @@ a {
 .my-home {
   color: white;
   height: 700px;
-  margin: -10px;
+  /* margin: -10px; */
 }
 
 .css-typing h1 {
@@ -159,7 +163,6 @@ a {
 }
 
 .overlay {
-  padding: ;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -179,21 +182,18 @@ a {
   white-space: nowrap;
   color: white;
   font-size: 20px;
-  position: absolute;
+  position: center;
   overflow: hidden;
   font-family: Courier;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   word-wrap: break-word;
-  white-space: pre-wrap;
+  white-space: pre-line;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
 }
+
 /* Confetti */
 
 .conf0 {
@@ -440,10 +440,10 @@ a {
 /* Confetti */
 
 .confetti-svg {
-  transform-origin: -10px 550px;
+  transform-origin: -10px 450px;
   position: absolute;
   z-index: 1;
-  transform: scale(50%);
+  transform: scale(20%);
 }
 
 .about-text {
@@ -462,4 +462,108 @@ a {
   -webkit-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
+}
+
+.my-projects {
+  margin-top: 30px;
+  margin-left: 6px;
+  position: relative;
+  z-index: -100;
+  height: 650px;
+  width: 99%;
+  border-radius: 10px;
+  overflow: hidden;
+  /* color: white; */
+}
+
+h2 {
+  font-weight: 100;
+  font-family: Courier;
+  color: white;
+  font-size: 30px;
+}
+
+iframe {
+  height: 500px;
+  width: 700px;
+  border-radius: 10px;
+  align-items: end;
+  margin: 20px;
+  border: none;
+}
+
+.scrollable-page-list {
+  height: 510px;
+  width: 1000px;
+  flex-direction: row;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollable-page-list::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  animation: float 2s alternate-reverse infinite;
+  /* animation: float 2s ease-in-out infinite; */
+  color: none;
+  margin: 10px;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+}
+
+.flutter-btn {
+  top: 270px;
+  left: 70px;
+  position: absolute;
+  z-index: 1;
+}
+
+.eem-btn {
+  top: 350px;
+  left: 1070px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iyang-btn {
+  top: 460px;
+  left: 80px;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+    background-color: yellow;
+  }
+  50% {
+    transform: translatey(-10px);
+    background-color: #974cbe;
+  }
+  100% {
+    transform: translatey(0px);
+    background-color: #ef3c8a;
+  }
+}
+
+.my-skill {
+  margin-top: 30px;
+  margin-left: 6px;
+  position: relative;
+  z-index: -100;
+  height: 650px;
+  width: 99%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
 }
