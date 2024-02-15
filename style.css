@@ -441,8 +441,10 @@ a {
 
 .confetti-svg {
   transform-origin: -10px 450px;
+  transform-origin: -10px 450px;
   position: absolute;
   z-index: 1;
+  transform: scale(20%);
   transform: scale(20%);
 }
 
