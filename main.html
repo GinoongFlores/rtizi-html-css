@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>RytzDev</title>
   </head>
   <body>
+  <header>
+      <nav>
+        <a href="#home" class="logo">Rytz<span>Dev</span></a>
+        <div class="sub-container">
+          <ul>
+            <li><center><a href="#home">Home</a></center></li>
+            <li><center><a href="#about">About</a></center></li>
+            <li><center><a href="#project">Projects</a></center></li>
+            <li><center><a href="#skill">Skill</a></center></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <section id="home" class="my-home">
-      <header>
-        <nav>
-          <a href="#home" class="logo">Rytz<span>Dev</span></a>
-          <div class="sub-container">
-            <ul>
-              <li><center><a href="#home">Home</a></center></li>
-              <li><center><a href="#about">About</a></center></li>
-              <li><center><a href="#project">Projects</a></center></li>
-              <li><center><a href="#skill">Skill</a></center></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
       <div class="body-container">
         <div>
           <center>
@@ -127,13 +128,13 @@
         </div>
       </img>
     </section>
-    < id="project" class="my-projects">
-      <a class="flutter-btn" href="#flutter"><button>Dev Flutter</button></a>
-      <a class="eem-btn" href="#eem"><button>IOT Energy Meter</button></a>
-      <a class="skets-btn" href="#skets"><button>Dev Skets</button></a>
+    <section id="project" class="my-projects">
+      <button class="flutter-btn" onclick="document.location='#flutter';">Dev Flutter</button>
+      <button class="eem-btn" onclick="document.location='#eem';">IOT Energy Meter</button>
+      <button class="skets-btn" onclick="document.location='#skets';">Dev Skets</button>
       <div class="body-container">
         <center>
-          <h2>My Projects</h2>
+          <h2 style="padding: 0px; margin: 0px;">My Projects</h2>
           <p style="color: white; width: auto; padding: 0;" class="about-text">These are some of the websites I made or was part of the making!</p>
           <div class="scrollable-page-list">
             <iframe id="flutter" src="https://devs.flutter.ph/#/" width="100px" height="500px"></iframe>
@@ -144,6 +145,7 @@
       </div>
     </section>
     <section id="skill" class="my-skill">
+      <h2 class="my-skill-header">Contact Me!</h2>
       <center><div class="language">
         <h2>Languages</h2>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD4klEQVR4nO3YT0gUURzA8dfBDgWFNtM/CKM6JLke8tBF2OZndYlO4bE/4MyAFNUhkiAoaiVPShCBlyibp9AhCqFDh/ZVkgcNAg+FYYVBBUFgO6MSxYSCsdi67m5v5vfezu8Lc5/9fXZ23/wYoyiKoiiKoiiKoihK4dKDs9vBC64C90eAB58tz5+zPH/K4v6D1nv+ibb74Wrse6zKrMHZnZbnD1rc/w08CJe9PP/D/gH/MPb9Vk0wkNtkcf8mcP9n0cHnXQtInn8B+9617mB/uBa432nxYLrUwf8LEXRjfw7tau4LayweuOAFXyodPCFUUhiuAj7TBtx/J2PwhFBGrTx3AHgwJnvwhLBC6f5co8WDoSgHTwgFsryZeuBB34pHSkKQW5r/MOZPJvMvT3EPHpJ8OpJxpARCwD9SAiHgHymBEPCPlEAIhTPdbEtj10RoOkKLa/Op4bD+/Kuw6fpk2HL7ey/TPdMRC2d6nRDMRYyO4XBP18Qjpmt17aLBtLN/z/U6IpiuCHddGn/OdMywRf/8h8j/fU5dn8QfqlP+tePi6xGmU7Unn20z7ezPpQCEEFOmnb2x+O0pdEKhJyHC1rW/rDNskSsGQAgRZjrZK/m/n8XO6PQkSG6LO7bGsMW3UgEIQXKGnT239ARRylsqPQkycsdqDEd8rASAECRk2uJ4oTN0OXuaFL0nVFq4ynDE+P8CACFU1oZ2cWS5t8hKNpUpehLKy3DEsEwAIITyVs7F9ij/s6tP0ZNQAoAjhqICAEIobeUcJQAQwsor56gBQGMEFsfKOQ4A0BQhlpVzXACgIUIsK+c4AUAzhFhWznEDgEYIsaycMQBAEwTpAIYrzpRzA1ECgAYI0gFMW7xRCQAUR5A6/A1udne5NxAHACiMIBXAdJ4eVRUAFEWQDJA9pjIAKIggF8B9dkh1AFAMQSrA+o4XtaYjfqkOAAohMNkZjnioAwAogiAdYKMrUqUs4VQAAAUQWBQZjjirCwAgI7CoMm3RqQsAICJEBlAqAvbgARkhUoBSELCHDsgIkQOshIA9cEBGiAWgGAL2sAEZITaA5RCwBw3ICLECFEIAL0g0AsMoHyF9Zxp9yICIgAKQj7Dv1lf0AQMiAhrAIkLDtbfowwVEBIbd1tMvL6fvTicWgalQU/f7AdX/jCEiBKZKe3s/PcEeLCAgMJXa2zP1OGkITLWShsBUrLlnaigpCEzVMqNznV2jc6EuF6vGdEJg1ZouCKya0wGBVXuqI7AklFEYgSWljKIILEllFERgSSujGAJLYhmFEFhSyyiCwJJcRgEE7BlQFEVRFEVRFEVRFKvK/gBUykIEFdA+VgAAAABJRU5ErkJggg==">
@@ -157,58 +159,49 @@
       </div></center>
       <center><div class="contact">
         <h2>Contact Me!</h2>
-        <div class="contact-container">
-          <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="Name" placeholder="Your name..">
-          </form>
-        </div>
-        <!-- <div class="container"> -->
-          <!-- <form action="/action_page.php">
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">First Name</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="lname">Last Name</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="country">Country</label>
-            </div>
-            <div class="col-75">
-              <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="subject">Subject</label>
-            </div>
-            <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <input type="submit" value="Submit">
-          </div>
-          </form>
-        </div> -->
-
+        <form action="echphi!">
+          <label for="fname">First Name:</label><br>
+          <input type="text" id="fname" name="First Name" placeholder="Juan">
+          <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname" name="Last Name" placeholder="Dela Cruz">
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <option value="australia">Philippines</option>
+            <option value="canada">Australia</option>
+            <option value="usa">USA</option>
+          </select>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:60px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
       </div></center>
     </section>
+    <footer class="footer">
+      <div class="socials">
+        <a href="https://github.com/rytzi" target="_blank"
+          ><i class="ph-duotone ph-github-logo"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/ritzi-april-lontoc-285430208/"
+          target="_blank"
+        >
+          <i class="ph-duotone ph-linkedin-logo"></i
+        ></a>
+        <a href="https://g.dev/rytzi" target="_blank">
+          <i class="ph-duotone ph-google-logo"></i
+        ></a>
+        <a
+          href="https://www.sololearn.com/en/profile/18378217"
+          target="_blank"
+          ><i class="ph-duotone ph-aperture"></i
+        ></a>
+        <a
+          href="https://stackoverflow.com/users/13641670/ritzi-april-lontoc"
+          target="_blank"
+          ><i class="ph-duotone ph-stack-overflow-logo"></i
+        ></a>
+      </div>
+      <center><p>&copy;2024 Ritzi Lontoc | All Rights Reserved</p></center>
+    </footer>
   </body>
 </html>
